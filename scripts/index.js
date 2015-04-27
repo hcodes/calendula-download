@@ -197,6 +197,6 @@ var App = {
     }
 };
 
-App.init.bind(App);
+App.init();
 
 });
