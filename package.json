@@ -1,0 +1,37 @@
+{
+  "name": "calendula-download",
+  "description": "Download Calendula",
+  "version": "1.0.0",
+  "author": {
+    "name": "Denis Seleznev",
+    "email": "hcodes@yandex.ru",
+    "url": "https://github.com/hcodes/calendula-download"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hcodes/calendula-download.git"
+  },
+  "homepage": "https://hcodes.github.io/calendula-download/",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/hcodes/calendula-download/blob/master/LICENSE"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.10"
+  },
+  "private": true,
+  "devDependencies": {
+    "async": "^0.9.0",
+    "gulp": "3.8.x",
+    "gulp-concat": "2.5.x",
+    "jscs": "1.x",
+    "jshint": "2.5.x"
+  },
+  "scripts": {
+    "test": "npm run-script jshint && npm run-script jscs && npm run-script yaspeller",
+    "jscs": "./node_modules/.bin/jscs .",
+    "jshint": "./node_modules/.bin/jshint ."
+  }
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Calendula : Spécial calendrier en JavaScript" />
+    <title>Calendula</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/index.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/icons.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="libs/calendula/build/calendula.all.css" />
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="libs/calendula/build/calendula.all.js"></script>
+    <script src="scripts/index.js"></script>
+    <script src="scripts/base64.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="countries-menu"><a href="index.be.html" title="be"><span class="icon icon_locale_be "></span></a><a href="index.de.html" title="de"><span class="icon icon_locale_de "></span></a><a href="index.html" title="en"><span class="icon icon_locale_en "></span></a><a href="index.es.html" title="es"><span class="icon icon_locale_es "></span></a><a href="index.it.html" title="it"><span class="icon icon_locale_it "></span></a><a href="index.fr.html" title="fr"><span class="icon icon_locale_fr icon_selected"></span></a><a href="index.ru.html" title="ru"><span class="icon icon_locale_ru "></span></a><a href="index.pl.html" title="pl"><span class="icon icon_locale_pl "></span></a><a href="index.tr.html" title="tr"><span class="icon icon_locale_tr "></span></a><a href="index.uk.html" title="uk"><span class="icon icon_locale_uk "></span></a></div>
+        <div class="title">
+            <div class="title__h">Calendula<sup class="title__version"></sup></div>
+            <div class="title__text">Spécial calendrier en JavaScript</div>
+            <ul class="title__list">
+                <li>Design ergonomique</li>
+                <li>Animation avec l'aide de CSS</li>
+                <li>Support pour les appareils mobiles</li>
+                <li>L'absence de dépendances de bibliothèques</li>
+                <li>L'initialisation</li>
+                <li>Habillage</li>
+                <li>Localisation</li>
+            </ul>
+            <a class="github" href="https://github.com/hcodes/calendula">Lire la suite sur GitHub</a>
+        </div>
+    </div>
+    <div class="content">
+        <div class="loading">Chargement en cours...</div>
+
+        <div class="source source_hidden">
+            <h1>L'utilisation la page</h1>
+            <pre id="code"><span class="tag">&lt;link</span> <span class="tag-attr">rel=</span><span class="tag-string">"stylesheet"</span> <span class="tag-attr">type=</span><span class="tag-string">"text/css"</span> <span class="tag-attr">href=</span><span class="tag-string">"calendula.css"</span> <span class="tag">/&gt;</span>
+<span class="tag">&lt;script</span> <span class="tag-attr">src=</span><span class="tag-string">"calendula.js"</span><span class="tag">&gt;&lt;/script&gt;</span>
+...
+<span class="tag">&lt;button</span> <span class="tag-attr">id=</span><span class="tag-string">"datepicker"</span><span class="tag">&gt;</span>Choisir<span class="tag">&lt;/button&gt;</span>
+<span class="tag">&lt;script&gt;</span>
+    <span class="js-keyword">var</span> sc = <span class="js-keyword">new</span> Calendula({
+        theme: <span class="js-string">'<span id="code-theme"></span>'</span>,
+        locale: <span class="js-string">'<span id="code-locale"></span>'</span>,
+        button: document.getElementById(<span class="js-string">'datepicker'</span>)
+    });
+<span class="tag">&lt;/script&gt;</span></pre>
+
+            <h1>L'assembly</h1>
+            <table class="source-table">
+            <tr>
+                <td class="prefs-cell">
+                    <div class="prefs-themes">
+                       <span class="pseudo" id="themes">Habillage</span>:<br />
+                       <div class="prefs-themes-content"></div>
+                    </div>
+
+                    <div class="prefs-holidays">
+                       <span class="pseudo" id="holidays">Jours fériés</span>:<br />
+                        <div class="prefs-holidays-content"></div>
+                    </div>
+
+                    <div class="prefs-locales">
+                        <span class="pseudo" id="locales">Langues</span>:
+                        <div class="prefs-locales-content"></div>
+                    </div>
+                </td>
+                <td class="source-cell">
+                    <div class="source-css-container">
+                        calendula.css:<span class="source-css__bytes">Octets: <span class="source-css__len"></span></span>
+                        <textarea class="source-css"></textarea>
+                        <a class="download download-css" download="calendula.css" href="#">Télécharger</a>
+                    </div>
+
+                    <div class="source-js-container">
+                        calendula.js: <span class="source-js__bytes">Octets: <span class="source-js__len"></span></span>
+                        <textarea class="source-js"></textarea>
+                        <a class="download download-js" download="calendula.js" href="#">Télécharger</a>
+                    </div>
+                </td>
+            </tr>
+            </table>
+        </div>
+    </div>
+    <script>
+        new Calendula({
+            id: 'calendula-promo',
+            locale: 'fr',
+            theme: 'default',
+            autocloseable: false,
+            closeAfterSelection: false
+        }).open();
+    </script>
+</body>
+</html>

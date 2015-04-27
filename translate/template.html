@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Calendula : {{page-title}}" />
+    <title>Calendula</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/index.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/icons.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="libs/calendula/build/calendula.all.css" />
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="libs/calendula/build/calendula.all.js"></script>
+    <script src="scripts/index.js"></script>
+    <script src="scripts/base64.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="countries-menu">{{_countries-menu}}</div>
+        <div class="title">
+            <div class="title__h">Calendula<sup class="title__version"></sup></div>
+            <div class="title__text">{{page-title}}</div>
+            <ul class="title__list">
+                <li>{{design}}</li>
+                <li>{{css-animation}}</li>
+                <li>{{touch-devices}}</li>
+                <li>{{without-libs}}</li>
+                <li>{{delayed}}</li>
+                <li>{{themes}}</li>
+                <li>{{locales}}</li>
+            </ul>
+            <a class="github" href="https://github.com/hcodes/calendula">{{github}}</a>
+        </div>
+    </div>
+    <div class="content">
+        <div class="loading">{{loading}}</div>
+
+        <div class="source source_hidden">
+            <h1>{{onpage}}</h1>
+            <pre id="code"><span class="tag">&lt;link</span> <span class="tag-attr">rel=</span><span class="tag-string">"stylesheet"</span> <span class="tag-attr">type=</span><span class="tag-string">"text/css"</span> <span class="tag-attr">href=</span><span class="tag-string">"calendula.css"</span> <span class="tag">/&gt;</span>
+<span class="tag">&lt;script</span> <span class="tag-attr">src=</span><span class="tag-string">"calendula.js"</span><span class="tag">&gt;&lt;/script&gt;</span>
+...
+<span class="tag">&lt;button</span> <span class="tag-attr">id=</span><span class="tag-string">"datepicker"</span><span class="tag">&gt;</span>{{choose}}<span class="tag">&lt;/button&gt;</span>
+<span class="tag">&lt;script&gt;</span>
+    <span class="js-keyword">var</span> sc = <span class="js-keyword">new</span> Calendula({
+        theme: <span class="js-string">'<span id="code-theme"></span>'</span>,
+        locale: <span class="js-string">'<span id="code-locale"></span>'</span>,
+        button: document.getElementById(<span class="js-string">'datepicker'</span>)
+    });
+<span class="tag">&lt;/script&gt;</span></pre>
+
+            <h1>{{build}}</h1>
+            <table class="source-table">
+            <tr>
+                <td class="prefs-cell">
+                    <div class="prefs-themes">
+                       <span class="pseudo" id="themes">{{themes}}</span>:<br />
+                       <div class="prefs-themes-content"></div>
+                    </div>
+
+                    <div class="prefs-holidays">
+                       <span class="pseudo" id="holidays">{{holidays}}</span>:<br />
+                        <div class="prefs-holidays-content"></div>
+                    </div>
+
+                    <div class="prefs-locales">
+                        <span class="pseudo" id="locales">{{langs}}</span>:
+                        <div class="prefs-locales-content"></div>
+                    </div>
+                </td>
+                <td class="source-cell">
+                    <div class="source-css-container">
+                        calendula.css:<span class="source-css__bytes">{{bytes}}: <span class="source-css__len"></span></span>
+                        <textarea class="source-css"></textarea>
+                        <a class="download download-css" download="calendula.css" href="#">{{download}}</a>
+                    </div>
+
+                    <div class="source-js-container">
+                        calendula.js: <span class="source-js__bytes">{{bytes}}: <span class="source-js__len"></span></span>
+                        <textarea class="source-js"></textarea>
+                        <a class="download download-js" download="calendula.js" href="#">{{download}}</a>
+                    </div>
+                </td>
+            </tr>
+            </table>
+        </div>
+    </div>
+    <script>var currentLocale = '{{locale}}';</script>
+</body>
+</html>

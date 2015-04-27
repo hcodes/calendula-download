@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calendula</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="../build/calendula.all.css" />
+    <script src="../build/calendula.all.js"></script>
+    <style type="text/css">
+        body
+        {
+            padding: 30px;
+        }
+        
+        .block
+        {
+            float: left;
+            width: 360px;
+            height: 360px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="block">
+    <button id="example-button1"></button>
+</div>
+
+
+<div class="block">
+    <button id="example-button2"></button>
+</div>
+
+<div class="block">
+    <button id="example-button3"></button>
+</div>
+
+<div class="block">
+    <button id="example-button4"></button>
+</div>
+
+<div class="block">
+    <button id="example-button5"></button>
+</div>
+
+<script>
+    ['default', 'black', 'ios', 'metro', 'android'].forEach(function(theme, i) {
+        var cl = new Calendula({
+                switcher: document.getElementById('example-button' + (i + 1)),
+                theme: theme,
+                value: 'today'
+            });
+
+        cl.open();
+    });
+</script>
+
+</body>
+</html>

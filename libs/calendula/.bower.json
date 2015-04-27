@@ -1,0 +1,42 @@
+{
+  "name": "calendula",
+  "description": "A special datepicker",
+  "authors": [
+    "Denis Seleznev <hcodes@yandex.ru>"
+  ],
+  "homepage": "http://hcodes.github.io/calendula/",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hcodes/calendula.git"
+  },
+  "bugs": "https://github.com/hcodes/calendula/issues/new",
+  "keywords": [
+    "calendula",
+    "datepicker",
+    "calendar",
+    "date"
+  ],
+  "ignore": [
+    "**/.*",
+    "examples",
+    "gulpfile.js",
+    "src",
+    "test",
+    "*.yml",
+    "package.json"
+  ],
+  "main": [
+    "build/calendula.all.js",
+    "build/calendula.all.css"
+  ],
+  "_release": "e7c9cd63d1",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "e7c9cd63d1b249340f3e1714834d0fbf87508c65"
+  },
+  "_source": "https://github.com/hcodes/calendula.git",
+  "_target": "*",
+  "_originalSource": "https://github.com/hcodes/calendula.git"
+}

@@ -1,0 +1,27 @@
+{
+    "defaultTheme": "default",
+    "defaultHolidays": "ru",
+    "defaultLocales": ["ru", "en"],
+    "themes": [
+        "default",
+        "ios",
+        "black",
+        "metro",
+        "android"
+    ],
+    "holidays": [
+        "ru", "tr", "uk"
+    ],
+    "locales": [
+        "be",
+        "de",
+        "en",
+        "es",
+        "it",
+        "fr",
+        "ru",
+        "pl",
+        "tr",
+        "uk"
+    ]
+}

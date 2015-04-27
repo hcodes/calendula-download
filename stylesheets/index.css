@@ -1,0 +1,272 @@
+@import "icons.css";
+
+html, body
+{
+    padding: 0;
+    margin: 0;
+    color: #000;
+    font-family: Arial, sans-serif;
+}
+
+h1
+{
+    font-size: 22px;
+    font-weight: normal;
+    font-style: italic;
+    font-family: Georgia, serif;
+    color: #333;
+    margin: 1.5em 0 0.5em 0;
+    padding: 0;
+}
+
+pre
+{
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+td
+{
+    vertical-align: top;
+}
+
+#calendula-promo
+{
+    left: 50px !important;
+    top: 25px !important;
+    opacity: 0.9 !important;
+}
+
+.header
+{
+    width: 100%;
+    height: 360px;
+    box-shadow: 0 0 60px #999;
+    border-bottom: 1px solid #aaa;
+    background: url(../images/bg.jpg) no-repeat #385117 center center;
+    background-size: 100% auto;
+}
+
+.title
+{
+    position: absolute;
+    left: 410px;
+    top: 30px;
+    color: #fff;
+}
+
+.title__h
+{
+    font-family: Georgia, sans-serif;
+    font-style: italic;
+    font-size: 60px;
+    text-shadow: 0 0 1px #000;
+    opacity: 0.9;
+}
+
+.title__text
+{
+    font-size: 14px;
+    opacity: 0.7;
+    text-shadow: 0 0 1px #000;
+    padding-left: 5px;
+}
+
+.title__list
+{
+    margin-left: 20px;
+    margin-top: 5px;
+    padding: 0;
+}
+
+.title__list li
+{
+    line-height: 1.7em;
+    text-shadow: 0 0 1px #000;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.title__version
+{
+    font-size: 14px;
+    color: #fff;
+}
+
+.content
+{
+    padding: 0 50px 50px 50px;
+}
+
+.source
+{
+    width: 100%;
+}
+
+.source_hidden
+{
+    display: none;
+}
+
+.source-table
+{
+    width: 100%;
+}
+
+.prefs-cell
+{
+    padding-right: 20px;
+    width: 10em;
+}
+
+.source-cell
+{
+    padding-left: 20px;
+}
+
+.source-js,
+.source-css
+{
+    display: block;
+    width: 100%;
+    height: 11em;
+    margin-bottom: 0.5em;
+}
+
+.source-js__bytes,
+.source-css__bytes
+{
+    float: right;
+}
+
+.source-js-container
+{
+    margin-top: 2em;
+}
+
+.prefs-locales,
+.prefs-holidays
+{
+    margin-top: 1em;
+}
+
+.github
+{
+    background: #CA5001;
+    display: inline-block;
+    padding: 7px;
+    border-radius: 5px;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    transition: background-color .3s linear;
+}
+
+.github:hover
+{
+    background: #DA7031;
+}
+
+.download
+{
+    font-weight: normal;
+    background: #CA5001;
+    display: inline-block;
+    padding: 5px 7px;
+    border-radius: 5px;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    transition: background-color .3s linear;
+}
+
+.download:hover
+{
+    background: #DA7031;
+}
+
+.github:link,
+.github:visited,
+.github:hover,
+.github:active
+{
+    text-decoration: none;
+}
+
+.download:link,
+.download:visited,
+.download:hover,
+.download:active
+{
+    text-decoration: none;
+}
+
+.pseudo
+{
+    color: #00a;
+    border-bottom: 1px dotted #00a;
+    line-height: 1.65em;
+    cursor: pointer;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.clear
+{
+    clear: both;
+}
+
+.countries-menu
+{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 2px 4px;
+    background-color: rgba(255,255,255,0.3);
+    border-radius: 4px;
+}
+
+.countries-menu .icon
+{
+    padding-right: 7px;
+    opacity: 0.6;
+    transition: opacity .3s linear;
+}
+
+.countries-menu .icon_selected
+{
+    box-shadow: 0 0 2px #fff;
+    opacity: 1;
+}
+
+.countries-menu .icon:hover
+{
+    opacity: 1;
+}
+
+.tag
+{
+    color: #170;
+}
+
+.tag-attr
+{
+    color: #00C;
+}
+
+.tag-string
+{
+    color: #A11;
+}
+
+.js-keyword
+{
+    color: #708;
+}
+
+.js-string
+{
+    color: #A11;
+}
