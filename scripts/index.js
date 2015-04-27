@@ -3,7 +3,6 @@ $(window).load(function() {
 var sc = new Calendula({
     id: 'calendula-promo',
     locale: window.currentLocale,
-    theme: 'default',
     autocloseable: false,
     closeAfterSelection: false
 }).open();
@@ -173,6 +172,7 @@ var App = {
         $('.source-js').html(text);
         $('.source-js__len').html(text.length);
         $('#code-locale').html(selectedLocale);
+        sc.setting('locale', selectedLocale);
     },
     buildCss: function() {
         var text = '' + this._sources.css.base,
@@ -192,8 +192,8 @@ var App = {
 
         $('.source-css').html(text);
         $('.source-css__len').html(text.length);
-        sc.setting('theme', selectedTheme);
         $('#code-theme').html(selectedTheme);
+        sc.setting('theme', selectedTheme);
     }
 };
 
