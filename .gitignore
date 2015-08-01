@@ -1,6 +1,6 @@
 node_modules/
 libs/calendula/*
-!libs/calendula/build/
+!libs/calendula/dist/
 libs/jquery/*
 !libs/jquery/dist/
 coverage/
