@@ -4,3 +4,11 @@
 [![devDependency Status](https://img.shields.io/david/dev/hcodes/calendula-download.svg)](https://david-dm.org/hcodes/calendula-download#info=devDependencies)
 
 Download page for [Calendula](https://hcodes.github.io/calendula-download/).
+
+
+### Development
+```
+bower i
+gulp translate # Get translates for templates
+npm test
+```
