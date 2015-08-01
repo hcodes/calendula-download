@@ -19,15 +19,15 @@
     }
   ],
   "engines": {
-    "node": ">= 0.10"
+    "node": ">= 0.12"
   },
   "private": true,
   "devDependencies": {
-    "async": "^0.9.0",
-    "gulp": "3.8.x",
-    "gulp-concat": "2.5.x",
-    "jscs": "1.x",
-    "jshint": "2.5.x"
+    "async": "1.x",
+    "gulp": "3.x",
+    "gulp-concat": "2.x",
+    "jscs": "2.x",
+    "jshint": "2.x"
   },
   "scripts": {
     "test": "npm run-script jshint && npm run-script jscs && npm run-script yaspeller",
