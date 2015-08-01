@@ -1,0 +1,14 @@
+{
+  "lang": "ru",
+  "fileExtensions": [".md"],
+  "excludeFiles": [
+    ".*",
+    "node_modules",
+    "translate",
+    "stylesheets",
+    "libs"
+  ],
+  "checkYo": true,
+  "dictionary": [
+  ]
+}

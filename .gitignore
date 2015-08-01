@@ -1,4 +1,7 @@
 node_modules/
-libs/
+libs/calendula/*
+!libs/calendula/build/
+libs/jquery/*
+!libs/jquery/dist/
 coverage/
 npm-debug.log
