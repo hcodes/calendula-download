@@ -8,6 +8,7 @@ Download page for [Calendula](https://hcodes.github.io/calendula-download/).
 
 ### Development
 ```
+npm i
 bower i
 gulp translate # Get translates for templates
 npm test
