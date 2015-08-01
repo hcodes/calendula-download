@@ -3,4 +3,4 @@
 [![Dependency Status](https://img.shields.io/david/hcodes/calendula-download.svg)](https://david-dm.org/hcodes/calendula-download)
 [![devDependency Status](https://img.shields.io/david/dev/hcodes/calendula-download.svg)](https://david-dm.org/hcodes/calendula-download#info=devDependencies)
 
-Download page [Calendula](https://hcodes.github.io/calendula-download/).
+Download page for [Calendula](https://hcodes.github.io/calendula-download/).
