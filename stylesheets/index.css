@@ -232,13 +232,13 @@ td
 .countries-menu .icon
 {
     padding-right: 7px;
-    opacity: 0.6;
+    opacity: 0.4;
     transition: opacity .3s linear;
 }
 
 .countries-menu .icon_selected
 {
-    box-shadow: 0 0 2px #fff;
+    box-shadow: 1px 1px 4px #fff;
     opacity: 1;
 }
 
