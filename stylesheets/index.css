@@ -168,7 +168,7 @@ td
     background: #DA7031;
 }
 
-.download
+.button
 {
     font-weight: normal;
     background: #CA5001;
@@ -179,9 +179,10 @@ td
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
     transition: background-color .3s linear;
+    cursor: pointer;
 }
 
-.download:hover
+.button:hover
 {
     background: #DA7031;
 }
@@ -194,10 +195,10 @@ td
     text-decoration: none;
 }
 
-.download:link,
-.download:visited,
-.download:hover,
-.download:active
+.button:link,
+.button:visited,
+.button:hover,
+.button:active
 {
     text-decoration: none;
 }

@@ -19,6 +19,12 @@ var App = {
             this.showUI();
         }
 
+        if(document.queryCommandSupported && document.execCommand) {
+            this._copySupported = document.queryCommandSupported('copy');
+        } else {
+            $('.copy-js, .copy-css').hide();
+        }
+
         $.getJSON('config.json').done(function(data) {
             this._config = data;
 
@@ -96,6 +102,16 @@ var App = {
 
         $('textarea').on('click', function() {
             this.select();
+        });
+
+        $('.copy-js').on('click', function() {
+            $('.source-js').get(0).select();
+            document.execCommand('copy');
+        });
+
+        $('.copy-css').on('click', function() {
+            $('.source-css').get(0).select();
+            document.execCommand('copy');
         });
     },
     toggleCheckboxes: function(elem) {
