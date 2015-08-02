@@ -105,13 +105,11 @@ var App = {
         });
 
         $('.copy-js').on('click', function() {
-            $('.source-js').get(0).select();
-            document.execCommand('copy');
+            that.copyText('.source-js');
         });
 
         $('.copy-css').on('click', function() {
-            $('.source-css').get(0).select();
-            document.execCommand('copy');
+            that.copyText('.source-css');
         });
     },
     toggleCheckboxes: function(elem) {
@@ -120,6 +118,14 @@ var App = {
         ch.each(function() {
             this.checked = !checked;
         });
+    },
+    copyText: function(selector) {
+        try {
+            $(selector).get(0).select();
+            document.execCommand('copy');
+        } catch(e) {
+            window.alert(e);
+        }
     },
     rebuild: function() {
         this.buildCss();
