@@ -4,7 +4,8 @@ var sc = new Calendula({
     id: 'calendula-promo',
     locale: window.currentLocale,
     autocloseable: false,
-    closeAfterSelection: false
+    closeAfterSelection: false,
+    value: 'today'
 }).open();
 
 var App = {

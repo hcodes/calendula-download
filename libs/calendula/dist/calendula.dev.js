@@ -3,8 +3,7 @@ var Calendula = (function(window, document, Date, Math, undefined) {
 
 'use strict';
 
-var NS = 'calendula',
-    MIN_MONTH = 0,
+var MIN_MONTH = 0,
     MAX_MONTH = 11;
 
 function extend(dest, source) {
@@ -87,7 +86,7 @@ extend(Cln.prototype, {
         this._init();
 
         if(this.isOpened()) {
-            that.timeout
+            this.timeout
                 .clearAll(['open', 'close'])
                 .set(function() {
                     that.timeout.clearAll('open');
@@ -232,7 +231,7 @@ extend(Cln.prototype, {
             this._removeExts();
 
             document.body.removeChild(this._container);
-            
+
             this._data = null;
             this._container = null;
             this._isInited = null;
@@ -298,7 +297,18 @@ extend(Cln.prototype, {
         this._update();
     },
     _rebuild: function() {
+        var isOpened = this.isOpened();
+        if(isOpened) {
+            this._delOpenedEvents();
+        }
+
         this._container.innerHTML = this.template.get('main');
+
+        if(isOpened) {
+            this._openedEvents();
+            this._monthSelector(this._currentDate.month, false);
+            this._yearSelector(this._currentDate.year, false);
+        }
     },
     _rebuildDays: function() {
         this._elem('days-container').innerHTML = this.template.get('days');
@@ -907,6 +917,8 @@ var div = document.createElement('div'),
         return el.className.search(re) !== -1;
     };
 
+var NS = 'calendula';
+
 /**
  * Build CSS class for bem-element.
  * @param {string} name - Bem-element name.
@@ -916,7 +928,7 @@ var div = document.createElement('div'),
  */
 function elem(name, m, val) {
     if(val === null || val === false) {
-        name = '';
+        m = '';
     } else if(val === true || val === undefined) {
         val = '';
     }
@@ -937,7 +949,7 @@ function mod(name, val) {
         val = '';
     }
 
-    return NS + '_' + name + (val === '' ? '' : '_' + val);
+    return NS + (name ? '_' + name + (val === '' ? '' : '_' + val) : '');
 }
 
 /**
@@ -1063,7 +1075,7 @@ var jshtml = (function() {
 
     var attrs = function(data) {
         var keys = Object.keys(data),
-            ignoredItems = ['c', 't', 'e', 'm'], // class, tag, element, modifier
+            ignoredItems = ['c', 't', 'e', 'm'], // content, tag, element, modifier
             text = [],
             classes = [],
             i, len,
@@ -1079,13 +1091,13 @@ var jshtml = (function() {
                     if(data.m.hasOwnProperty(i)) {
                         classes.push(elem(data.e, i, data.m[i]));
                     }
-                } 
+                }
             } else {
                 for(i in data.m) {
                     if(data.m.hasOwnProperty(i)) {
                         classes.push(mod(i, data.m[i]));
                     }
-                } 
+                }
             }
         }
 
