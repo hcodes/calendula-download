@@ -47,38 +47,38 @@ var App = {
 
         this._config.locales.forEach(function(el) {
             var id = 'locale-' + el,
-                selected = '';
+                checked = '';
 
             if(this._config.defaultLocales.indexOf(el) !== -1) {
-                selected = 'checked="checked" ';
+                checked = 'checked="checked" ';
             }
 
-            loc += '<input type="checkbox" ' + selected + 'id="' + id +
+            loc += '<input type="checkbox" ' + checked + 'id="' + id +
                 '" /> <label for="' + id + '"><span class="icon icon_locale_' + el +
                 '"></span>' + el + '</label><br />';
         }, this);
 
         this._config.themes.forEach(function(el) {
             var id = 'theme-' + el,
-                selected = '';
+                checked = '';
 
             if(el === this._config.defaultTheme) {
-                selected = 'checked="checked" ';
+                checked = 'checked="checked"';
             }
 
-            the += '<input type="checkbox" ' + selected + 'id="' + id +
-                '" /> <label for="' + id + '">' + el + '</label><br />';
+            the += '<input type="radio" ' + checked + ' id="' + id +
+                '" value="' + el + '" name="theme" /> <label for="' + id + '">' + el + '</label><br />';
         }, this);
 
         this._config.holidays.sort().forEach(function(el) {
             var id = 'holiday-' + el,
-                selected = '';
+                checked = '';
 
             if(el === this._config.defaultHolidays) {
-                selected = 'checked="checked" ';
+                checked = 'checked="checked" ';
             }
 
-            hol += '<input type="checkbox" ' + selected + 'id="' + id +
+            hol += '<input type="checkbox" ' + checked + 'id="' + id +
                 '" /> <label for="' + id + '"><span class="icon icon_locale_' + el +
                 '"></span>' + el + '</label><br />';
         }, this);
@@ -95,8 +95,8 @@ var App = {
     setEvents: function() {
         var that = this;
 
-        $('.source input:checkbox').on('click', this.rebuild.bind(this));
-        $('#locales, #themes, #holidays').on('click', function() {
+        $('.source input:checkbox, .source input:radio').on('click', this.rebuild.bind(this));
+        $('#locales, #holidays').on('click', function() {
             that.toggleCheckboxes($(this).parent());
             that.rebuild();
         });
@@ -115,7 +115,12 @@ var App = {
     },
     toggleCheckboxes: function(elem) {
         var ch = elem.find('input:checkbox'),
+            checked;
+
+        if(ch.length) {
             checked = ch[0].checked;
+        }
+
         ch.each(function() {
             this.checked = !checked;
         });
