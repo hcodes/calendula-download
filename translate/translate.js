@@ -84,7 +84,30 @@ module.exports = {
                 return;
             }
             
-            fs.writeFileSync('words.json', JSON.stringify(total, null, '  '));
+            fs.writeFileSync('words.json', JSON.stringify(total, function (k, v) {
+                if (v && typeof v === 'object' && !Array.isArray(v)) { // assumes an isArray function
+                    var sorted = {},
+                        keys = [],
+                        key, i, len;
+
+                    for (key in v) {
+                        if (v.hasOwnProperty(key)) {
+                            keys.push(key);
+                        }
+                    }
+
+                    keys.sort();
+
+                    for (i = 0, len = keys.length; i < len; ++i) {
+                        sorted[keys[i]] = v[keys[i]];
+                    }
+
+                    return sorted;
+                } else {
+                    return v;
+                }
+            }, 4));
+            
             config.locales.forEach(function(locale) {
                 var bufTemplate = processTemplate(locale, total[locale], template);
                 fs.writeFileSync( './' + getPageHref(locale), bufTemplate, 'utf-8');
