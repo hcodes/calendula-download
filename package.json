@@ -28,7 +28,8 @@
     "gulp-concat": "2.x",
     "jscs": "2.x",
     "jshint": "2.x",
-    "yaspeller": "2.x"
+    "yaspeller": "2.x",
+    "sort-keys": "1.1.x"
   },
   "scripts": {
     "test": "npm run-script jshint && npm run-script jscs && npm run-script yaspeller",

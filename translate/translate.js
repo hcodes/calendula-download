@@ -1,7 +1,8 @@
 var https = require('https'),
     fs = require('fs'),
     qs = require('querystring'),
-    async = require('async');
+    async = require('async'),
+    sortKeys = require('sort-keys');
 
 var config = require('../config.json'),
     ruWords = require('./ru_words.json'),
@@ -84,29 +85,7 @@ module.exports = {
                 return;
             }
             
-            fs.writeFileSync('words.json', JSON.stringify(total, function (k, v) {
-                if (v && typeof v === 'object' && !Array.isArray(v)) { // assumes an isArray function
-                    var sorted = {},
-                        keys = [],
-                        key, i, len;
-
-                    for (key in v) {
-                        if (v.hasOwnProperty(key)) {
-                            keys.push(key);
-                        }
-                    }
-
-                    keys.sort();
-
-                    for (i = 0, len = keys.length; i < len; ++i) {
-                        sorted[keys[i]] = v[keys[i]];
-                    }
-
-                    return sorted;
-                } else {
-                    return v;
-                }
-            }, 4));
+            fs.writeFileSync('words.json', JSON.stringify(sortKeys(total, {deep: true}), null, 4));
             
             config.locales.forEach(function(locale) {
                 var bufTemplate = processTemplate(locale, total[locale], template);
