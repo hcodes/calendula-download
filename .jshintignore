@@ -1,5 +1,0 @@
-.*
-gulpfile.js
-node_modules/**
-libs/**
-scripts/base64.js

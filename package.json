@@ -19,22 +19,22 @@
     }
   ],
   "engines": {
-    "node": ">= 0.12"
+    "node": ">= 6"
   },
   "private": true,
   "devDependencies": {
     "async": "1.x",
     "gulp": "3.x",
     "gulp-concat": "2.x",
-    "jscs": "2.x",
-    "jshint": "2.x",
-    "yaspeller": "2.x",
-    "sort-keys": "1.1.x"
+    "eslint": "4.x",
+    "yaspeller": "3.x",
+    "sort-keys": "2.0.x",
+    "calendula": "0.9.x",
+    "jquery": "3.2.x"
   },
   "scripts": {
     "test": "npm run-script jshint && npm run-script jscs && npm run-script yaspeller",
-    "jscs": "./node_modules/.bin/jscs .",
-    "jshint": "./node_modules/.bin/jshint .",
+    "eslint": "eslint .",
     "yaspeller": "./node_modules/.bin/yaspeller ."
   }
 }

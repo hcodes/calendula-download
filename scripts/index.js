@@ -1,4 +1,4 @@
-$(window).load(function() {
+$(window).on('load', function() {
 
 var sc = new Calendula({
     id: 'calendula-promo',
