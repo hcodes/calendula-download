@@ -14,7 +14,7 @@ gulp.task('jquery', () => {
 });
 
 gulp.task('calendula', () => {
-    return gulp.src('./node_modules/calendula/dist/calendula.all.*')
+    return gulp.src('./node_modules/calendula/dist/calendula.*')
         .pipe(gulp.dest(destDir));
 });
 
