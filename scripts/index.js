@@ -13,7 +13,7 @@ var App = {
         js: {},
         css: {}
     },
-    _dist: 'libs/calendula/dist/',
+    _dist: 'dist/',
     init: function() {
         // for debug
         if(window.location.protocol === 'file:') {
