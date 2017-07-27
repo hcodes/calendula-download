@@ -1,7 +1,6 @@
 'use strict';
 
 const gulp = require('gulp');
-const concat = require('gulp-concat');
 const destDir = 'dist/';
     
 gulp.task('translate', cb => {

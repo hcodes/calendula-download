@@ -1,3 +1,4 @@
+dist
 .*
 _*.js
 node_modules

@@ -25,7 +25,6 @@
   "devDependencies": {
     "async": "1.x",
     "gulp": "3.x",
-    "gulp-concat": "2.x",
     "eslint": "4.x",
     "yaspeller": "3.x",
     "sort-keys": "2.0.x",
@@ -33,7 +32,7 @@
     "jquery": "3.2.x"
   },
   "scripts": {
-    "test": "npm run-script jshint && npm run-script jscs && npm run-script yaspeller",
+    "test": "npm run-script eslint && npm run-script yaspeller",
     "eslint": "eslint .",
     "yaspeller": "./node_modules/.bin/yaspeller ."
   }

@@ -21,7 +21,7 @@ function processTemplate(locale, words, template) {
     let buf = template;
 
     Object.keys(words).forEach(function(key) {
-        var re = new RegExp('\{\{' + key + '\}\}', 'g');
+        var re = new RegExp('{{' + key + '}}', 'g');
         buf = buf.replace(re, words[key]);
     });
 
@@ -59,14 +59,14 @@ function translateUsingAPI(text, key, locale, callback) {
             str += chunk;
         });
 
-        res.on('end', function(e) {
+        res.on('end', function() {
             var data = JSON.parse(str);
             total[locale][key] = data.text[0];
             callback();
         });
     });
 
-    req.on('error', function(e) {
+    req.on('error', function() {
         callback(true);
     });
 

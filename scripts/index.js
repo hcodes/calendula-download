@@ -88,9 +88,7 @@ var App = {
         $('.prefs-holidays-content').html(hol);
     },
     getVersion: function() {
-        $.getJSON('package.json').done(function(data) {
-            $('.title__version').html(data.version);
-        });
+        $('.title__version').html(Calendula.version);
     },
     setEvents: function() {
         var that = this;
@@ -144,7 +142,7 @@ var App = {
         $('.download-' + id).attr('href', 'data:' + mimeType +
             ';charset=utf-8;base64,' + Base64.encode(code));
     },
-    loadResources: function(callback) {
+    loadResources: function() {
         var requests = [],
             that = this;
 
@@ -178,7 +176,7 @@ var App = {
         var text = this._sources.js.base,
             selectedLocale = '';
 
-        this._config.locales.forEach(function(el, i) {
+        this._config.locales.forEach(function(el) {
             var id = 'locale-' + el;
             if($('#' + id)[0].checked) {
                 text += this._sources.js[id];
@@ -190,7 +188,7 @@ var App = {
 
         selectedLocale = selectedLocale || 'en';
 
-        this._config.holidays.forEach(function(el, i) {
+        this._config.holidays.forEach(function(el) {
             var id = 'holiday-' + el;
             if($('#' + id)[0].checked) {
                 text += this._sources.js[id];
@@ -206,7 +204,7 @@ var App = {
         var text = '' + this._sources.css.base,
             selectedTheme = '';
 
-        this._config.themes.forEach(function(el, i) {
+        this._config.themes.forEach(function(el) {
             if($('#theme-' + el)[0].checked) {
                 text += this._sources.css[el];
 
