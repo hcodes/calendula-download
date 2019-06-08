@@ -24,16 +24,22 @@
   "private": true,
   "devDependencies": {
     "async": "1.x",
-    "gulp": "3.x",
+    "gulp": "4.0.0",
     "eslint": "4.x",
     "yaspeller": "3.x",
     "sort-keys": "2.0.x",
     "calendula": "0.9.x",
-    "jquery": "3.2.x"
+    "jquery": "3.4.0"
   },
   "scripts": {
     "test": "npm run-script eslint && npm run-script yaspeller",
     "eslint": "eslint .",
-    "yaspeller": "./node_modules/.bin/yaspeller ."
+    "yaspeller": "./node_modules/.bin/yaspeller .",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true,
+  "dependencies": {
+    "snyk": "^1.174.1"
   }
 }
