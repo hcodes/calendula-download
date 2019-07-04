@@ -34,6 +34,12 @@
   "scripts": {
     "test": "npm run-script eslint && npm run-script yaspeller",
     "eslint": "eslint .",
-    "yaspeller": "./node_modules/.bin/yaspeller ."
+    "yaspeller": "./node_modules/.bin/yaspeller .",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true,
+  "dependencies": {
+    "snyk": "^1.189.0"
   }
 }
