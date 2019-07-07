@@ -36,6 +36,12 @@
     "eslint": "eslint .",
     "yaspeller": "./node_modules/.bin/yaspeller .",
     "build": "gulp",
-    "translate": "gulp translate"
+    "translate": "gulp translate",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
+  },
+  "snyk": true,
+  "dependencies": {
+    "snyk": "^1.192.3"
   }
 }
