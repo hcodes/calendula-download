@@ -2,9 +2,10 @@
 
 const gulp = require('gulp');
 const destDir = 'dist/';
+const translate = require('./translate/translate');
     
 gulp.task('translate', cb => {
-    require('./translate/translate').translate(cb);
+    translate.translate(cb);
 });
 
 gulp.task('jquery', () => {
@@ -17,5 +18,5 @@ gulp.task('calendula', () => {
         .pipe(gulp.dest(destDir));
 });
 
-gulp.task('default', ['jquery', 'calendula']);
+gulp.task('default', gulp.series('jquery', 'calendula'));
 
