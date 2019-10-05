@@ -23,13 +23,13 @@
   },
   "private": true,
   "devDependencies": {
-    "async": "^2.6.2",
+    "async": "^3.0.1",
+    "calendula": "^0.10.0",
+    "eslint": "^6.5.1",
     "gulp": "^4.0.2",
-    "eslint": "^6.0.1",
-    "yaspeller": "^6.0.0",
-    "sort-keys": "^3.0.0",
-    "calendula": "^0.9.12",
-    "jquery": "^3.4.1"
+    "jquery": "^3.4.1",
+    "sort-keys": "^4.0.0",
+    "yaspeller": "^6.0.2"
   },
   "scripts": {
     "test": "npm run-script eslint && npm run-script yaspeller",
