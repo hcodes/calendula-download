@@ -23,7 +23,7 @@
   },
   "private": true,
   "devDependencies": {
-    "async": "^3.0.1",
+    "async": "^3.2.2",
     "calendula": "^0.10.0",
     "eslint": "^6.5.1",
     "gulp": "^4.0.2",
